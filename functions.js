@@ -5,7 +5,22 @@ function getUserData(){
     let school = document.querySelector("#school").value
     let course = document.querySelector("#course").value
 
-    let userData = { name , email , phone , school , course }
+    let date = new Date()
+    let months = ["Jan" , "Feb" , "Mars" , "April" , "May" , "June" , "July" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec" ]
+    goodDate = date.getDay()  + " " + months[date.getMonth()] + " "  + date.getFullYear() + " at " + date.getHours() 
+
+    let userData = { name , email , phone , school , course , data : goodDate }
 
     return userData 
 }
+
+
+// date = {
+//     year : date.getFullYear() ,
+//     month : months[date.getMonth()] ,
+//     day : date.getDay() ,
+//     hour : date.getHours()
+// }
+
+
+// console.log(goodDate)
